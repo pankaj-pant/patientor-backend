@@ -6,4 +6,8 @@ router.get('/', (_req, res) => {
     res.send(patientService.getPatientsWithoutSsn());
 });
 
+router.post('/', (req, res) => {
+    res.send(patientService.addPatient(req.body));
+});
+
 export default router;
